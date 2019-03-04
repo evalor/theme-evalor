@@ -1,0 +1,18 @@
+{% if config.intro %}
+    <div class="sidebar-intro">
+        <div class="intro-avatar">
+            <img src="{{ config.intro.avatar }}" alt="">
+        </div>
+        <div class="intro-nickname"><h2>{{ config.intro.nickname }}</h2></div>
+        <div class="intro-content">
+            <h6>{{ config.intro.content }}</h6>
+        </div>
+        {% if config.intro.icons %}
+        <ul class="intro-icons">
+            {% if config.intro.icons.github %} <li><a href="{{config.intro.icons.github}}" target="_blank"><i class="fa fa-fw fa-github-alt"></i></a></li> {% endif %}
+            {% if config.intro.icons.qq %} <li><a href="{{config.intro.icons.qq}}" target="_blank"><i class="fa fa-fw fa-qq"></i></a></li> {% endif %}
+            {% if config.intro.icons.email %} <li><a href="mailto:{{config.intro.icons.email}}"><i class="fa fa-fw fa-envelope"></i></a></li> {% endif %}
+        </ul>
+        {% endif %}
+    </div>
+{% endif %}

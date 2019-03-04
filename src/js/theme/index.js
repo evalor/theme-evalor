@@ -28,6 +28,15 @@ function init() {
             sidebar.toggle();
         }
     });
+
+    window.onresize = function () {
+        var vw = document.documentElement.clientWidth;
+        if (vw < 768 && sidebar.isOpen()) {
+            sidebar.toggle()
+        } else if (vw > 768 && !sidebar.isOpen()) {
+            sidebar.toggle()
+        }
+    }
 }
 
 gitbook.events.on('start', init);

@@ -55,6 +55,7 @@ $(document).ready(function() {
     $.each(onLoad, function(i, fn) {
         fn();
     });
+
 });
 
 

@@ -3,8 +3,9 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>{% block title %}{{ config.title|d("GitBook", true) }}{% endblock %}</title>
+        <title>{% block title %}{% if config.seotitle %}{{ config.seotitle }}{% endif %}{% endblock %}</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        {% if config.keyword %}<meta name="keyword" content="{{ config.keyword }}">{% endif %}
         <meta name="description" content="{% block description %}{% endblock %}">
         <meta name="generator" content="GitBook {{ gitbook.version }}">
         {% if config.author %}<meta name="author" content="{{ config.author }}">{% endif %}
