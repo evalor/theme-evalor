@@ -19,6 +19,8 @@ lessc -clean-css src/less/ebook.less _assets/ebook/ebook.css
 lessc -clean-css src/less/pdf.less _assets/ebook/pdf.css
 lessc -clean-css src/less/mobi.less _assets/ebook/mobi.css
 lessc -clean-css src/less/epub.less _assets/ebook/epub.css
+lessc -clean-css src/prism/prism.less _assets/prism/prism.css
+
 
 # Copy fonts
 mkdir -p _assets/website/fonts
